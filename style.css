@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,700;0,800;1,300&family=Roboto&display=swap');
 
-.gallery-image img {
-    width: 100%;
-}
-
 header .top {
     width: calc(100% - 80px);
     padding: 40px 40px 0 40px;
@@ -108,7 +104,6 @@ main {
 
 .about {
     display: block;
-    flex-direction: column;
     padding-bottom: 40px;
 }  
 
@@ -143,6 +138,10 @@ main {
     white-space: nowrap;
 }
 
+.gallery-image img {
+    width: 100%;
+}
+
 .container img {
     width: 350px;
 }
@@ -155,6 +154,7 @@ main {
     color: #ffffff;
     text-transform: uppercase;
     text-shadow: 3px 4px 1px #283618;
+    padding: 80px 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -162,7 +162,7 @@ main {
     opacity: 0;
 }
 
-.gallery-image:hover .post-header {
+.post-header:hover {
     animation: appear 0.5s forwards;
 }
 
@@ -174,7 +174,7 @@ main {
 
 footer {
     width: calc(100% - 80px);
-    padding: 40px 40px;
+    padding: 40px 40px 10px 40px;
     background-color: #283618;
     overflow: hidden;
     display: flex;
@@ -199,11 +199,11 @@ footer ul li p {
     color: #ffffff;
 }
 
-.footer-sm {
+.footer-media {
     width: 35px;
 }
 
-.footer-sm img {
+.footer-media img {
     width: 100%;
     margin-bottom: 10px;
 }
@@ -228,6 +228,10 @@ nav {
     margin-bottom: 20px;
 }
 
+.about {
+    padding: 0 35px 40px 35px;
+} 
+
 .about-container {
     display: flex;
     flex-direction: row;
@@ -243,7 +247,7 @@ nav {
     object-fit: contain;
     align-self: flex-start;
     width: 400px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .recipe {
@@ -267,7 +271,12 @@ nav {
 }
 
 .post-header {
+    padding: 10vh 0;
     font-size: 3.2vw;
+}
+    
+.footer-media {
+    width: 50px;
 }
 
 }

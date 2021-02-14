@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,700;0,800;1,300&family=Roboto&display=swap');
+
+.gallery-image img {
+    width: 100%;
+}
+
+header .top {
+    width: calc(100% - 80px);
+    padding: 40px 40px 0 40px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: #606C38;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #b9714a;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #b9714a;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: #e6af2e;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+hr {
+    border-top: 1px solid #bcc1ba;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content:space-around;
+    text-align: center; /*IE*/
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #363537;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #b9714a;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .header-banner {
+    background-image: url("img/banner.jpg");
+    width: 100%;
+    height: calc(100vh - 500px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+}
+
+main {
+    width: calc(100% - 80px);
+    padding: 40px 40px;
+}
+
+.about {
+    display: block;
+    flex-direction: column;
+    padding-bottom: 40px;
+}  
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.about p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #363537;
+    line-height: 24px;
+    text-align: left; 
+}
+
+.about-container img {
+    display: none;
+}
+
+.gallery-links {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.gallery-image {
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.container img {
+    width: 350px;
+}
+
+.post-header {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 3px 4px 1px #283618;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.gallery-image:hover .post-header {
+    animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    width: calc(100% - 80px);
+    padding: 40px 40px;
+    background-color: #283618;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    width: fit-content;
+    padding-left: 0;
+}
+
+footer ul li {
+    display: block;
+    padding: 0 0 10px 0;
+}
+
+footer ul li p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.footer-sm {
+    width: 35px;
+}
+
+.footer-sm img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* arvutiversioon */
+@media only screen and (min-width: 950px) {
+
+header .header-banner {
+    width: calc(100% - 80px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    display: none;
+}
+
+nav {
+    margin: 0 15%;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+    
+.about-container p {
+    width: 75%;    
+}
+
+.about-container img {
+    display: inherit;
+    object-fit: contain;
+    align-self: flex-start;
+    width: 400px;
+    margin-left: 40px;
+}
+
+.recipe {
+    display: none;
+}
+
+.gallery-links {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.gallery-image {
+    margin: 0;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.container img {
+    width: 29vw;
+}
+
+.post-header {
+    font-size: 3.2vw;
+}
+
+}
